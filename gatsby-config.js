@@ -3,5 +3,5 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "react-periodic-table",
   },
-  plugins: [],
+  plugins: ['gatsby-plugin-postcss'],
 };
