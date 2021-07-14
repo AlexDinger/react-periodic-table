@@ -1,3 +1,58 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+div[data-id="1"] {
+}
+
+div[data-id="2"] {
+  grid-column-end: -1;
+}
+
+div[data-id="5"] {
+  grid-column-end: 14;
+}
+
+div[data-id="13"] {
+  grid-column-end: 14;
+}
+
+.noble-gas {
+  background-color: #e1cfe5;
+}
+
+.diatomic-nonmetal {
+  background-color: #c0d7f0;
+}
+
+.alkali-metal {
+  background-color: #f7aac0;
+}
+
+.alkaline-earth-metal {
+  background-color: #ffdca9;
+}
+
+.metalloid {
+  background-color: #93d9f5;
+}
+
+.polyatomic-nonmetal {
+  background-color: #e0e0f0;
+}
+
+.post-transition-metal {
+  background-color: #d4ebd8;
+}
+
+.transition-metal {
+  background-color: #fefcdc;
+}
+
+.lanthanide {
+  background-color: #e7dad4;
+}
+
+.actinide {
+  background-color: #f4dcd4;
+}

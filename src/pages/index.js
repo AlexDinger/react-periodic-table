@@ -1,13 +1,12 @@
-import * as React from "react"
-import PeriodicTable from '../components/PeriodicTable.jsx';
-
+import * as React from "react";
+import PeriodicTable from "../components/PeriodicTable.jsx";
 
 const index = () => {
   return (
-    <main className="bg-white h-full w-full">
+    <main className="h-screen w-screen flex justify-center items-center bg-white">
       <PeriodicTable />
     </main>
-  )
-}
+  );
+};
 
-export default index
+export default index;
