@@ -1,54 +1,34 @@
 import React, { useState } from "react";
-import classNames from "classnames";
 
-const Element = ({ atomicNum, abbreveation, name, mass, id, type }) => {
-  //   switch (type) {
-  //     case "diatomic nonmetal":
-  //       return "red";
-  //     case "noble gas":
-  //       return "orange";
-  //     case "alkali metal":
-  //       return "blue";
-  //     case "alkaline earth metal":
-  //       return "gray";
-  //     case "metalloid":
-  //       return "yellow";
-  //     case "polyatomic nonmetal":
-  //       return "green";
-  //     case "diatomic nonmetal":
-  //       return "pink";
-  //     case "post-transition metal":
-  //       return "red";
-  //     case "transition metal":
-  //       return "red";
-  //     case "lanthanide":
-  //       return "red";
-  //     case "actinide":
-  //       return "red";
-  //   }
-  const backgroundColor = classNames({
-    "diatomic-nonmetal": type == "diatomic nonmetal",
-    "alkali-metal": type == "alkali metal",
-    "noble-gas": type == "noble gas",
-    "alkaline-earth-metal": type == "alkaline earth metal",
-    metalloid: type == "metalloid",
-    "polyatomic-nonmetal": type == "polyatomic nonmetal",
-    "post-transition-metal": type == "post-transition metal",
-    "transition-metal": type == "transition metal",
-    lanthanide: type == "lanthanide",
-    actinide: type == "actinide",
-    unknown: type,
-  });
+import ElementCard from "./ElementCard.jsx";
+import ElementIcon from "./ElementIcon.jsx";
+
+const Element = (props) => {
+  const [cardState, setCardState] = useState(false);
 
   return (
     <div
-      className={`${backgroundColor} flex flex-col justify-center items-start text-xs p-1 rounded-sm border-2 border-transparent hover:border-gray-800 cursor-pointer`}
-      data-id={id}
+      className={` ${
+        cardState ? "" : ""
+      }  rounded-sm border-2 border-transparent hover:border-black cursor-pointer`}
+      data-id={props.id}
+      onClick={() => setCardState(!cardState)}
     >
-      <span className="self-start text-sm">{atomicNum}</span>
-      <span className="capitalize text-2xl">{abbreveation}</span>
-      <span className="capitalize">{name}</span>
-      <span className="">{mass}</span>
+      {cardState ? (
+        <div className="bg-black absolute inset-0 z-40 opacity-70"></div>
+      ) : (
+        ""
+      )}
+      <div
+        className={`${
+          cardState
+            ? "absolute  h-96 -translate-x-1/2 -translate-y-1/2 z-50 p-3 w-3/5"
+            : "static w-auto h-auto translate-x-0 translate-y-0 z-0 p-0"
+        }  flex flex-row justify-between items-center transform top-1/2 left-1/2`}
+      >
+        <ElementIcon {...props} cardState={cardState} />
+        {cardState ? <ElementCard cardState={cardState} /> : ""}
+      </div>
     </div>
   );
 };
