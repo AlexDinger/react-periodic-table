@@ -25,8 +25,8 @@ const ElementIcon = ({
 
   return (
     <div
-      className={`${backgroundColor} flex flex-col justify-between items-start  h-full text-xs p-2 ${
-        cardState ? "w-1/5 p-5" : "w-20"
+      className={`${backgroundColor} flex flex-col justify-between items-start h-full text-xs ${
+        cardState ? "w-auto p-7" : "p-2 w-full"
       }`}
     >
       <span className={`self-start ${cardState ? "text-4xl" : "text-sm"}`}>
