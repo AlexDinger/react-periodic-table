@@ -1,8 +1,8 @@
-## React Periodic Table
+# React Periodic Table
 
 Built using Gatsby and Tailwind CSS
 
-# TODO
+## TODO
 - Header
 - Legend
 - Legend hover highlight
