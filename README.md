@@ -1,5 +1,12 @@
-Periodic table
+## React Periodic Table
 
-- React
-- Gatsby
-- Tailwind CSS
+Built using Gatsby and Tailwind CSS
+
+# TODO
+- Header
+- Legend
+- Legend hover highlight
+- Missing elements
+- More encapsulation
+- Card styles
+- Overlay exit transition

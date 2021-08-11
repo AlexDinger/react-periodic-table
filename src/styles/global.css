@@ -2,8 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-div[data-id="1"] {
-}
+
 
 div[data-id="2"] {
   grid-column-end: -1;
@@ -56,47 +55,3 @@ div[data-id="13"] {
 .actinide {
   background-color: #f4dcd4;
 }
-
-/* .noble-gas:hover {
-  filter: brightness(0.8);
-}
-
-.diatomic-nonmetal:hover {
-  filter: brightness(0.8);
-}
-
-.alkali-metal:hover {
-  filter: brightness(0.8);
-}
-
-.alkaline-earth-metal:hover {
-  filter: brightness(0.8);
-}
-
-.metalloid:hover {
-  filter: brightness(0.8);
-}
-
-.polyatomic-nonmetal:hover {
-  filter: brightness(0.8);
-}
-
-.post-transition-metal:hover {
-  filter: brightness(0.8);
-}
-
-.transition-metal:hover {
-  filter: brightness(0.8);
-}
-
-.lanthanide:hover {
-  filter: brightness(0.8);
-}
-
-.actinide:hover {
-  filter: brightness(0.8);
-}
-
-.periodic {
-  
-} */
