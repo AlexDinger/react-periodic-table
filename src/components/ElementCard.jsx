@@ -1,16 +1,12 @@
 import React from "react";
 
-const ElementCard = ({ cardState }) => {
+const ElementCard = (props) => {
   return (
-    // <div
-    //   className={`flex justify-center items-center duration-1000 inset-0 transform  ${
-    //     cardState ? "z-50 absolute scale-100" : "scale-0 static z-auto"
-    //   }`}
-    // >
-    //   <div className="bg-black opacity-50 absolute inset-0 "></div>
-    //   <div className="w-1/2 h-1/2 bg-white opacity-100 absolute rounded-sm transition duration-1000"></div>
-    // </div>
-    <div className={`${cardState ? '' : ''} bg-red-500 h-full w-4/5`}></div>
+    <div className={`border-2 border-gray-400 h-96 w-96 overflow-y-scroll bg-white text-black p-5`}>
+      {Object.keys(props).map((key, index) => {
+        return <div><h1 className="text-2xl border-b-2 border-black pr-4 w-min capitalize">{key}</h1><p>{props[key]}</p></div>
+      })}
+    </div>
   );
 };
 

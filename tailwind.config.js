@@ -5,11 +5,11 @@ module.exports = {
     extend: {
       gridTemplateColumns: {
         // 18 Column Grid 
-        '18': 'repeat(18, minmax(0, 1fr))',
+        '18': 'repeat(18, minmax(min-content, auto))',
       },
       gridTemplateRows: {
         // 9 Row Grid 
-        '9': 'repeat(9, minmax(0, 1fr))',
+        '9': 'repeat(9, minmax(min-content, auto))',
       },
     },
   },

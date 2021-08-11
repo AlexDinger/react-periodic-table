@@ -1,45 +1,39 @@
 import React from "react";
 import classNames from "classnames";
 
-const ElementIcon = ({
-  atomicNum,
-  abbreveation,
-  name,
-  mass,
-  type,
-  cardState,
-}) => {
+const ElementIcon = (props) => {
   // prettier-ignore
   const backgroundColor = classNames({
-    "diatomic-nonmetal": type === "diatomic nonmetal",
-    "alkali-metal": type === "alkali metal",
-    "noble-gas": type === "noble gas",
-    "alkaline-earth-metal": type === "alkaline earth metal",
-    "metalloid": type === "metalloid",
-    "polyatomic-nonmetal": type === "polyatomic nonmetal",
-    "post-transition-metal": type === "post-transition metal",
-    "transition-metal": type === "transition metal",
-    "lanthanide": type === "lanthanide",
-    "actinide": type === "actinide",
+    "diatomic-nonmetal": props.category === "diatomic nonmetal",
+    "alkali-metal": props.category === "alkali metal",
+    "noble-gas": props.category === "noble gas",
+    "alkaline-earth-metal": props.category === "alkaline earth metal",
+    "metalloid": props.category === "metalloid",
+    "polyatomic-nonmetal": props.category === "polyatomic nonmetal",
+    "post-transition-metal": props.category === "post-transition metal",
+    "transition-metal": props.category === "transition metal",
+    "lanthanide": props.category === "lanthanide",
+    "actinide": props.category === "actinide",
   });
 
+
   return (
-    <div
-      className={`${backgroundColor} flex flex-col justify-between items-start h-full text-xs ${
-        cardState ? "w-auto p-7" : "p-2 w-full"
-      }`}
-    >
-      <span className={`self-start ${cardState ? "text-4xl" : "text-sm"}`}>
-        {atomicNum}
-      </span>
-      <span className={`capitalize ${cardState ? "text-9xl" : "text-xl"}`}>
-        {abbreveation}
-      </span>
-      <span className={`capitalize ${cardState ? "text-4xl" : ""}`}>
-        {name}
-      </span>
-      <span className={`${cardState ? "text-4xl" : ""}`}>{mass}</span>
-    </div>
+
+        <div
+        className={`bg-blue-100 ${backgroundColor} flex flex-col justify-between items-start text-xs h-full ${props.cardState ? 'p-5' : 'p-2'}`}
+      >
+        <span className={`self-start ${props.cardState ? "text-4xl" : "text-sm"}`}>
+          {props.number}
+        </span>
+        <span className={`capitalize ${props.cardState ? "text-9xl" : "text-xl"}`}>
+          {props.symbol}
+        </span>
+        <span className={`capitalize ${props.cardState ? "text-4xl" : ""}`}>
+          {props.name}
+        </span>
+        <span className={`${props.cardState ? "text-4xl" : ""}`}>{props.atomic_mass}</span>
+      </div>
+
   );
 };
 

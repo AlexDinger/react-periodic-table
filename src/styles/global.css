@@ -57,7 +57,7 @@ div[data-id="13"] {
   background-color: #f4dcd4;
 }
 
-.noble-gas:hover {
+/* .noble-gas:hover {
   filter: brightness(0.8);
 }
 
@@ -96,3 +96,7 @@ div[data-id="13"] {
 .actinide:hover {
   filter: brightness(0.8);
 }
+
+.periodic {
+  
+} */
