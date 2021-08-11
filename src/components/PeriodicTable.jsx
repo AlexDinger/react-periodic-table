@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Element from "../components/Element.jsx";
 import { elementData } from "../../PeriodicTable.js";
 

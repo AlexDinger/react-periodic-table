@@ -9,7 +9,7 @@ const ElementOverlay = (props) => {
     const defaultStyle = {
         transition: `all ${duration}ms linear`,
         position: 'absolute',
-        top: '-50%',
+        top: '-51%',
     };
 
     const overlayTransition = {
@@ -19,12 +19,17 @@ const ElementOverlay = (props) => {
         //exited: { transform: 'translate(-50%, -50%)'}
     };
 
+    const handleClose = () => {
+        props.setCardState(false);
+    }
+
     return (
-        <div className={`absolute ${props.cardState ? 'top-0' : '-top-full'} left-0 w-full h-full overflow-hidden`}>
+        <div className={`absolute ${props.cardState ? 'top-0' : '-top-full'} left-0 w-full h-full overflow-hidden flex justify-center items-center`}>
 
             <Transition in={props.cardState} timeout={duration}>
                 {(state) => (
-                    <div style={{...defaultStyle, ...overlayTransition[state]}} className="flex flex-row justify-center items-center w-full h-96 space-x-10">
+                    <div style={{...defaultStyle, ...overlayTransition[state]}} className="flex flex-row justify-center items-center h-96 space-x-10">
+                        <span onClick={() => handleClose()} className="text-white absolute z-50 -top-10 text-2xl right-5 cursor-pointer">X</span>
                         <div className="h-full">
                             <ElementIcon {...props} cardState={props.cardState} />
                         </div>
